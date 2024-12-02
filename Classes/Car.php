@@ -2,7 +2,7 @@
 
 class Car {
     // Properties / Fields
-    public $brand;
+    private $brand;
     private $color;
     public $vehicleType = "car";
 
@@ -12,7 +12,16 @@ class Car {
         $this->brand = $brand;
         $this->color = $color;
     }
+
+    // Method
+    public function getCarInfo(){
+        return "Brand: ". $this->brand .", Color: ". $this->color;
+    }
 }
 
-$car01 = new Car("Volvo", "green");
+// $car01 = new Car("Volvo", "green");
 // echo $car01->brand;
+
+// echo $car01->getCarInfo();
+// echo "<br>";
+// echo $car01->vehicleType;
